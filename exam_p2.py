@@ -12,17 +12,17 @@ def process_file(file_name):
     [["Mary","F",7065], ["Anna","F",2604],...]
 
     """
-    pass  # delete this line and replace with your code here
-
+    full_list = open(file_name).read().splitlines()
+    baby_list = [baby.split(',') for baby in full_list] 
+    return baby_list
+   
 
 def total_births(year):
     """
-
     :param year: an integer, between 1880 and 2010
     :return: an integer, the total births of all the babies in that year
     """
-    pass  # delete this line and replace with your code here
-
+    pass
 
 def proportion(name, gender, year):
     """
@@ -46,7 +46,8 @@ def highest_year(name, gender):
 
 
 def main():
-    pass  # delete this line and replace with your code here
+    # baby_list = process_file('Exam2018/exam2018/babynames/yob1880.txt')
+    print(process_file('Exam2018/exam2018/babynames/yob1880.txt'))
 
 
 if __name__ == '__main__':
